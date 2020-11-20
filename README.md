@@ -1,15 +1,18 @@
 # Fenetre-Tkinter-ISEN
 Fenêtre Tkinter permattant de consulter l'ENT.
+```python 
 from tkinter import *
 import webbrowser
 
 def open_channel():
     webbrowser.open_new("https://auth.isen-ouest.fr/cas/login?service=https://web.isen-ouest.fr/uPortal/Login%3FrefUrl%3D%2FuPortal%2Ff%2Fu29l1s7%2Fnormal%2Frender.uP")
-
+```
 #création de la fenetre
+```python
 window = Tk()
+```
 # personnaliser cette fenetre
-
+```python
 window.title("Isen Simplon")
 window.geometry("720x480")
 window.minsize(480, 360)
@@ -42,3 +45,4 @@ frame.pack(expand=YES)
 
 # #afficher
 window.mainloop()
+```
