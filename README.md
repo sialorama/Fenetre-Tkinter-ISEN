@@ -1,18 +1,13 @@
 # Fenetre-Tkinter-ISEN
-Fenêtre Tkinter permattant de consulter l'ENT.
+Fenêtre Tkinter permattant de consulter l'ENT sur le site de l'ISEN Brest.
 ```python 
 from tkinter import *
 import webbrowser
-
 def open_channel():
     webbrowser.open_new("https://auth.isen-ouest.fr/cas/login?service=https://web.isen-ouest.fr/uPortal/Login%3FrefUrl%3D%2FuPortal%2Ff%2Fu29l1s7%2Fnormal%2Frender.uP")
-```
 #création de la fenetre
-```python
 window = Tk()
-```
-# personnaliser cette fenetre
-```python
+#personnaliser cette fenetre
 window.title("Isen Simplon")
 window.geometry("720x480")
 window.minsize(480, 360)
@@ -27,7 +22,7 @@ Canvas.create_image(width/2, height/2, image=image)
 Canvas.pack(expand=YES)
 #Créer la frame
 #relief prend les valeurs flat, groove, raised, ridge, solid, or sunken
-frame = Frame(window, bg='#41A77F', bd=1)
+frame = Frame(window, bg='#41A77F', bd=1, relief=SUNKEN)
 #ajouter du texte
 label_title = Label(frame, text="Isen Brest", font=("Courrier", 28), bg='#41A77F', fg='white')
 #centrer le titre
@@ -42,7 +37,6 @@ mon_bouton = Button(frame, text="Visiter l'ENT ISEN", font=("courrier", 25), bg=
 mon_bouton.pack(expand=YES)
 #Ajouter
 frame.pack(expand=YES)
-
 # #afficher
 window.mainloop()
 ```
